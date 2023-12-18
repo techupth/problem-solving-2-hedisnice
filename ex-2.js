@@ -2,6 +2,23 @@
 
 const fizzBuzz = function (n) {
   //Start coding here
+  const result = [];
+
+  for (let i = 1; i <= n; i++) {
+    let value = "";
+
+    if (i % 3 === 0) {
+      value += "Fizz";
+    }
+
+    if (i % 5 === 0) {
+      value += "Buzz";
+    }
+
+    result.push(value || i.toString());
+  }
+
+  return result;
 };
 
 const result1 = fizzBuzz(3);
